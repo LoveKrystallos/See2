@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.see2.fragment.MyFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/colorHei">
+        <ImageView
+            android:id="@+id/iv_mine"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mine_pic"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_mine"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="未登录"
+            android:textSize="18dp"
+            android:textColor="@color/colorWrite"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="登录一下,内容更精彩"
+            android:textSize="18dp"
+            android:textColor="@color/colorWrite"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_jsfen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorWrite"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_head">
+
+        <ImageView
+            android:id="@+id/iv_jsfen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mine_jifen" />
+
+        <TextView
+            android:id="@+id/tv_jifen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/iv_jsfen"
+            android:text="我的积分"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tv_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tv_jifen"
+            android:text="new"
+            android:textColor="@color/colorRed"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/iv_fan"
+            android:background="@drawable/btn_shape"
+            android:text="未签到"
+            android:textColor="@color/colorWrite"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/iv_fan"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mine_fan" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_jsfen"
+        app:layout_constraintTop_toBottomOf="@+id/rl_jsfen"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorHui"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <RelativeLayout
+        android:background="@color/colorWrite"
+        android:id="@+id/rl_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_jsfen"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_start"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mine_start" />
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_start"
+            android:text="我的收藏"
+            android:textSize="24dp"
+            android:layout_marginLeft="8dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mine_fan"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_start"
+        app:layout_constraintTop_toBottomOf="@+id/rl_start"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorHui"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+    <RelativeLayout
+        android:background="@color/colorWrite"
+        android:id="@+id/rl_mes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_start"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_mes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mine_mes" />
+        <TextView
+            android:id="@+id/tv_mes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_mes"
+            android:text="我的收藏"
+            android:textSize="24dp"
+            android:layout_marginLeft="8dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mine_fan"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorWrite"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_mes">
+
+        <ImageView
+            android:id="@+id/iv_set"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mine_set" />
+
+        <TextView
+            android:id="@+id/tv_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/iv_set"
+            android:text="我的收藏"
+            android:textSize="24dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/mine_fan" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rl_set"
+        android:layout_margin="20dp"
+        android:text="登录"
+        android:textSize="36dp"
+        android:textColor="@color/colorWrite"
+        android:background="@drawable/btn_shape"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
